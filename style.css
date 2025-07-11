@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row; /* row by default */
+}
+
+/* Left panel */
+.left {
+  flex: 0 0 30%; /* Flex-grow: 0, shrink: 0, basis: 30% */
+  background: url('https://picsum.photos/200/300') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+/* Odin logo bar */
+.logo {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.logo h1 {
+  font-family: 'Courier New', monospace;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: white;
+  margin: 0;
+}
+
+.photo-credit {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.7rem;
+}
+
+/* Right panel */
+.right {
+  flex: 1; /* Remaining 70% */
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Intro text */
+.intro p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  max-width: 500px;
+}
+
+/* Form layout */
+.form {
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+input.error {
+  border-color: #b00;
+}
+
+button {
+  background-color: #596D48;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 1px 2px 2px #ccc;
+}
+
+.login-link {
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: #4b6043;
+  text-decoration: none;
+  font-weight: bold;
+}
